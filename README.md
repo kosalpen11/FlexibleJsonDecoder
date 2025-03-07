@@ -22,7 +22,7 @@ targets: [
 import FlexibleJsonDecoder
 
 @FlexibleJsonDecoder
-struct User {
+struct User: Codable {
     var id: Int
     var name: String
     var email: String
@@ -48,7 +48,7 @@ enum UserRole: String, DefaultEnumProvider {
 }
 
 @FlexibleJsonDecoder
-struct Account {
+struct Account: Codable {
     var id: Int
     var role: UserRole
 }
